@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 PRINT</title>
+  <link rel="shortcut icon" type="image/png" href="images/ico_full.png"/>
+  <link rel="stylesheet" href="stylesheet/prism.css">
+  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Introduction -->
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/10print.jpg);">
+    <div id="class-languages">
+      <i class="fab fa-html5 mr-1" style="color: #f84820"></i>
+      <i class="fab fa-css3-alt mr-1" style="color: #1970b5"></i>
+      <i class="fab fa-js-square mr-1" style="color: #FFE01B"></i>
+    </div>
+    <div class="container">
+      <div class="main">
+        <img src="images/logo.png" alt="">
+        <div class="class-title">
+          <h1>10 PRINT</h1>
+        </div>
+      </div>
+      <p>Connais-tu la ligne de code suivante: <code>10 PRINT CHR$(205.5+RND(1)); : GOTO 10</code>?
+        <br />
+        Probablement pas... Nous allons explorer à quoi elle sert et reproduire cela en P5.JS!</p>
+      <a class="btn btn-primary tl-button" href="#challenge" role="button">Commencer !</a>
+    </div>
+  </div>
+
+  <div class="container" id="challenge">
+
+    <div class="accordion" id="accordionExample">
+
+      <!-- Etape 1 -->
+      <div class="card">
+        <div class="card-header" id="heading1">
+          <h2 class="mb-0">
+            <button class="btn btn-link done task" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+              Etape 1 - Défis à compléter avant celui-ci
+            </button>
+          </h2>
+        </div>
+        <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Avant de t'attaquer à ce défi, on te conseille de compléter les défis suivants:</p>
+            <ol>
+              <li><a href="https://techieslab.github.io/year-prediction_instructions/" target="_blank">En 2020 je serai...</a></li>
+              <li><a href="https://techieslab.github.io/rainbow_instructions/" target="_blank">Ça va bien aller</a></li>
+              <li><a href="https://techieslab.github.io/soap-bubble-adv_instructions/" target="_blank">Bulles de savant</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Etape 2 -->
+      <div class="card">
+        <div class="card-header" id="heading2">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+              Etape 2 - BASIC
+            </button>
+          </h2>
+        </div>
+        <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>La ligne de code que tu as vue dans la description du projet n'est pas du JavaScript, c'est probablement pour cela que tu ne l'a pas du tout reconnu. Regardons la de plus près:</p>
+
+            <pre><code class="language-js">
+              10 PRINT CHR$(205.5+RND(1)); : GOTO 10
+            </code></pre>
+
+            <p>Elle a l'air bizarre non? Cela ne ressemble pas du tout au JavaScript... En effet, c'est en un language appellé BASIC, developpé pour tourner sur les ordinateurs <i>Commodore 64</i>... <b>EN 1964</b>!</p>
+
+            <p>Donc pas de problèmes, c'est totalement normal que tu n'aies jamais entendu parler de ce language et donc que tu ne le reconnaisse pas! Examinons maintenant ce qu'il fait:</p>
+
+            <p>Le 10 au début indique simplement le numéro de ligne. Cette ligne est donc la 10e ligne du code. Pourquoi est-ce qu'on n'a pas simplement mis un 1? En Basic, il est très compliqué de changer une ligne une fois écrite. Il est donc courant de mettre des multiples de 10 comme numéro de lignes où cas où il fait changer quelque chose entre 2 lignes.</p>
+
+            <p>Observe comment la fin du code est <code>GOTO 10</code>. La fin de la ligne nous dit donc de retourner à la ligne 10, qui est celle qu'on regarde en ce moment. Donc le code va boucler <b>infiniement</b>. </p>
+
+            <p>Le mot <code>PRINT</code> ne devrait pas être trop compliqué, il dit à l'ordinateur d'imprimer quelque chose. C'est un peu comme un <code>console.log()</code> en JavaScript.</p>
+
+            <p>Finalement, on a cette expression bizarre au milieu de la ligne: <code>CHR$(205.5+RND(1))</code>. Je ne vais pas expliquer pourquoi cette ligne fonctionne, mais sache qu'elle va imprimer soit un "/" soit un "\" de façon aléatoire.</p>
+
+            <p>Notre code va donc en fait juste imprimer plein de "/" et de "\" à la suite l'un de l'autre, pour créer un pattern comme celui que tu peux observer tout en haut de cette page.</p>
+
+            <p>Va jetter un coup d'oeil à <a href="https://www.youtube.com/watch?v=m9joBLOZVEo" target="_blank">cette vidéo</a>. Tu verra le code en action!</p>
+
+            <p>Cela a l'air joli non? Bien que le Basic est sûrement un language très intéressant, on ne va pas coder ce projet en Basic. On va plutôt le coder en P5.JS, et le customiser à fond! Tu peux voir mon projet <a href="./P5JS/index.html" target="_blank">ici</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Etape 3 -->
+      <div class="card">
+        <div class="card-header" id="heading3">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+              Etape 3 - Les bases
+            </button>
+          </h2>
+        </div>
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Pour commencer, il nous faut savoir comment dessiner des "/" et des "\" en P5.JS. On ne va pas utiliser l'option <code>text()</code>, comme c'est très peu stylisable. On va dessiner les barres par nous même!</p>
+
+            <p>Pour dessiner des lignes, la fonction <code>line()</code> existe! De quels paramètres auras-tu besoin pour dessiner un "\"? Et pour un "/"?</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep1a" role="button" aria-expanded="false" aria-controls="rep1a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep1a">
+              <div class="card card-body">
+                Pour dessiner un "\", on peut simplement faire
+                <pre><code class="language-js">
+                  line(0, 0, 10, 10);
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Imaginons qu'on veuille dessiner plein de "\". On sait comment en dessiner 1, c'est déjà pas mal. On veut créer une animation comme dans la vidéo du code effectué en Basic. Pour faire cela, on va dessiner notre arrière-plan dans la fonction <code>setup()</code>. C'est un peu bizarre comme on le dessine normalement dans la fonction <code>draw()</code>, mais il y a bien une raison. En effet, si on dessine l'arrière-plan dans la fonction <code>draw()</code>, on doit tout re-dessiner à chaque fois comme on recouvrira tout avec l'arrière-plan. Si on dessine l'arrière-plan qu'un fois, on peut simplement rajouter un "\" à chaque étape!</p>
+
+            <p>On aimerait alors avoir une variable qui garde en quelle position on vient de dessiner un "\" pour pouvoir en dessiner un ailleurs après. Commençons par créer une variable <code>positionX</code>. Attention, comme cette variable doit être <b>globale</b>, soit sûr de la définer en dehors des fonctions.</p>
+
+            <pre><code class="language-js">
+              let positionX = 0;
+
+              function setup() {
+                createCanvas(400, 400);
+                background(220);
+              }
+
+              function draw() {
+                // Dessiner plein de "\"  
+              }
+            </code></pre>
+
+            <p>Comment cas-tu changer ton code pour dessiner un "\" maintenant? Tu dois utiliser la nouvelle variable 2 fois!</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep1b" role="button" aria-expanded="false" aria-controls="rep1b">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep1b">
+              <div class="card card-body">
+                <pre><code class="language-js">
+                  line(positionX, 0, positionX + 10, 10);
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Tu as surement remarqué que pour le moment on ne dessine toujours qu'un seul "\". Et tu as bien raison! Il nous faut chnager la variable <code>variableX</code> avec le temps pour faire "bouger" le "\". Pour faire changer cette variable, à la fin de la fonction <code>draw()</code> tu peux simplement faire</p>
+
+            <pre><code class="language-js">
+              function draw() {
+                // Dessiner un "\"
+                positionX = positionX + 10;
+              }
+            </code></pre>
+
+            <p>Tu vas maintenant voir plein de "\" se dessiner l'un à la suite de l'autre. Mais lorsque la ligne est finie, le code ne passe pas à la ligne suivant, mais il continue en dehors de l'écran. As-tu une idée comment le faire passer à la ligne?</p>
+
+            <p>Bien vu! Pour passer à la ligne on doit introduire une variable <code>positionY</code> aussi. Crée la avec la première variable et re-écris le code pour dessiner la ligne en utilisant cette nouvelle variable. De nouveau, tu dois l'utilise 2 fois!</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep1c" role="button" aria-expanded="false" aria-controls="rep1c">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep1c">
+              <div class="card card-body">
+                <pre><code class="language-js">
+                  line(positionX, positionY, positionX + 10, positionY + 10);
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Ici, on ne doit pas simplement augementer la variable à chaque tour. En effet, on doit augementer la <code>positionY</code> lorsqu'on dépasse de l'écran. Comment coderais-tu cela?</p>
+
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#rep1d" role="button" aria-expanded="false" aria-controls="rep1d">Indice</a>
+            </p>
+            <div class="collapse mb-3" id="rep1d">
+              <div class="card card-body">
+                Utilise une condition
+                <pre><code class="language-js">
+                  if( XXX ) {
+                    // ...
+                  }
+                </code></pre>
+                <p>Plutôt que le <code>XXX</code>, indique la condition pour passer à la ligne.</p>
+              </div>
+            </div>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep1e" role="button" aria-expanded="false" aria-controls="rep1e">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep1e">
+              <div class="card card-body">
+                <pre><code class="language-js">
+                  if( positionX > width ) {
+                    positionX = 0;
+                    positionY = positionY + 10;
+                  }
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Tu as maitnenant, si tout va bien, une jolie animation qui dessine plein de lignes! Bien joué!</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Etape 4 -->
+      <div class="card">
+        <div class="card-header" id="heading4">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+              Etape 4 - Aléatoire
+            </button>
+          </h2>
+        </div>
+        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>On aimerait maintenant que l'ordinateur choissise <b>aléatoirement</b> entre un "\" et un "/"... Pour commencer, comment changerais tu ton code pour qu'il dessine des "/"?</p>
+
+            <p>En effet, il suffit de changer l'ordre de quelques paramètres dans la fonction <code>line()</code>:</p>
+
+            <pre><code class="language-js">
+              line(positionX + 10, positionY, positionX, positionY + 10);
+            </code></pre>
+
+            <p>Essaie de mettre les deux codes <code>line()</code> l'un après l'autre. Tu devrais voir les deux se dessiner normalement, et donc des croix apparaître. Super! On veut maintenant en dessiner qu'un seul de façon aléatoire!</p>
+
+            <p>Pour faire quelque chose avec une probabilité 1/2, c'est à dire que les deux actions ont autant de chance de se passer (Comme un lancer de pièce), on peut utiliser le code suivant:</p>
+
+            <pre><code class="language-js">
+              if( random(1) > 0.5 ) {
+                // Action 1
+              } else {
+                // Action 2
+              }
+            </code></pre>
+
+            <p>La raison pour laquelle cela marche: <code>random(1)</code> va donner un nombre (à virgules) aléatoire entre 0 et 1. Il y a autant de nombres entre 0 et 0.5 qu'entre 0.5 et 1 (Comme 0.5-0=1-0.5), et donc <code>random(1) > 0.5</code> va arriver la moitié du temps.</p>
+
+            <p>Essaie d'implementer ceci dans ton code! Tes deux actions sont les deux lignes que tu peux dessiner!</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep4a" role="button" aria-expanded="false" aria-controls="rep4a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep4a">
+              <div class="card card-body">
+                <pre><code class="language-js">
+                  if( random(1) > 0.5 ) {
+                    line( positionX, positionY, positionX + 10, positionY + 10);
+                  } else {
+                    line( positionX + 10, positionY, positionX, positionY + 10);
+                  }
+                </code></pre>
+              </div>
+            </div>
+
+            <p>T'as vu comment c'est joli?? On a réussi à reproduire le code qui tenait en une ligne sur le Commodore 64!</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Etape 5 -->
+      <div class="card">
+        <div class="card-header" id="heading5">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+              Etape 5 - Améliorations
+            </button>
+          </h2>
+        </div>
+        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Tu trouves peut-être que les traîts sont trop petits? C'est facile à résoudre! Je te conseille de créer une variable <b>globale</b> qui stocke la taille des traîts, comme cela c'est facile à la changer. Tu dois alors bien sûr te souvenir de changer tous les 10 dans ton code par cette variable. Par exemple</p>
+
+            <pre><code class="language-js">
+              line( positionX, positionY, positionX + taille, positionY + taille);
+            </code></pre>
+
+            <p>Ensuite on pourrait changer la couleur des traîts. Pour ce faire, rajoute simplement un <code>stroke()</code> avec la couleur de ton choix au début de la function <code>setup()</code>. La function <code>stroke()</code> colorie les traîts, comme la function <code>fill()</code> colorie des objets.</p>
+
+            <pre><code class="language-js">
+              stroke("green");
+            </code></pre>
+            
+            <p>On peut aussi changer l'épaisseur de nos traîts. Pour ce faire, on utilise la function <code>strokeWeight(10)</code>. De nouveau, le 10 est à titre indicatif!</p>
+
+            <p>Ce serait cool d'avoir une couleur qui change entre chaque traît de façon aléatoire non? Cela permet de donner des designs supers! Comme tu le sais peut-être, une façon de coder une couleur est avec la forme RGB. Par exemple, pour coder un <code>stroke("green")</code>, on peut aussi faire</p>
+
+            <pre><code class="language-js">
+              stroke(0, 255, 0);
+            </code></pre>
+
+            <p>Les 3 paramètres de la function <code>stroke()</code> sont les niveaux de Rouge, Vert et de Bleu (Red Green Blue, d'où RGB). Le maximum est de 255. Pour faire un couleur aléatoire il suffit d'utiliser 3 fois la fonction <code>random()</code>. As-tu une idée de comment faire?</p>
+
+            <p>
+              <a class="btn btn-danger" data-toggle="collapse" href="#rep5a" role="button" aria-expanded="false" aria-controls="rep5a">Réponse</a>
+            </p>
+            <div class="collapse mb-3" id="rep5a">
+              <div class="card card-body">
+                <pre><code class="language-js">
+                  stroke( random(255), random(255), random(255) );
+                </code></pre>
+              </div>
+            </div>
+
+            <p>Utilisant une technique très similaire, tu peux donner une épaisseur aléatoire à ta ligne aussi!</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Etape 6 -->
+      <div class="card">
+        <div class="card-header" id="heading6">
+          <h2 class="mb-0">
+            <button class="btn btn-link task" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+              Etape 5 - À toi de jouer
+            </button>
+          </h2>
+        </div>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Il est maintenant à ton tour d'être créatif! Tu peux changer les lignes par des carrés ou des rectangles ou des smileys! Tu peux faire exactement ce qui te plaît, sois créatif! Voici un exemple de ce que tu peux faire, mais sens toi libre de t'orienter vers ta propre idée!</p>
+
+            <img width="100%" src="images/10print_circles.png" />
+          </div>
+        </div>
+      </div>
+
+
+    </div> 
+  </div>
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://techieslab.be/"><i class="fas fa-globe"></i></i></a>
+    <a href="https://www.facebook.com/TechiesLabBrussels"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/TechiesLab"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox#/id/r-3298711" rel="noopener noreferrer" target="_blank" class="alert-link copyright">
+      <i class="far fa-copyright"></i>
+      2020 Techies Lab ASBL. All rights reserved.
+    </a>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="javascript/prism.js"></script>
+</body>
+</html>
