@@ -1,3 +1,6 @@
+// Based on Daniel Shiffman's video:
+// https://www.youtube.com/watch?v=bEyTZ5ZZxZs
+
 let x = 0;
 let y = 0;
 let l = 40;
